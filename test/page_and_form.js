@@ -1,14 +1,11 @@
 const Nightmare = require('nightmare');
 const {expect} = require('chai');
 const elems = require('../page/elems');
-const actions = require('../page/actions');
-
-
 const SavedRepliesPage = require('../page/savedRepliesPage');
-const sp = new SavedRepliesPage();
+
 
 describe('page elements', function () {
-
+  const sp = new SavedRepliesPage();
   this.timeout('15s');
 
   context('page elements and form', () => {
@@ -48,7 +45,7 @@ describe('page elements', function () {
         .then((form) => {
           expect(form).to.be.not.null;
         });
-    }); //
+    });
 
 
     it('button for adding saved replies is disabled when form is empty', () => {

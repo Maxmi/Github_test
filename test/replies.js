@@ -1,12 +1,10 @@
 const Nightmare = require('nightmare');
 const {expect} = require('chai');
 const elems = require('../page/elems');
-
 const SavedRepliesPage = require('../page/savedRepliesPage');
-const sp = new SavedRepliesPage();
 
 describe('replies', function () {
- 
+  const sp = new SavedRepliesPage();
   this.timeout('15s');
   
   context('saved replies', () => {
@@ -81,8 +79,7 @@ describe('replies', function () {
           expect(button).to.be.not.null;
         });
     });
-    
-  });//end of context
+  });
   
   context('formatting bar', () => {
     beforeEach('sign in to Github and type a title, then...', () => {
@@ -114,6 +111,5 @@ describe('replies', function () {
           expect(href).to.equal('https://github.com/Maxmi')
         })
     });
-  }); //end of context
-  
-}); //most outer describe
+  });
+}); 
